@@ -9,7 +9,12 @@ derived from what the pipeline already writes to `projects/<id>/`.
 python -m backlot open <project-id>   # start server if needed + open browser
 python -m backlot open                # library view (all projects)
 python -m backlot serve --port 4750   # run the server in the foreground
+# LAN access (only on a trusted network):
+python -m backlot serve --host 0.0.0.0 --port 4750
 ```
+
+`backlot serve` binds to `127.0.0.1` by default. Set `BACKLOT_HOST` to make a
+different bind address the default for your local environment.
 
 ## How it stays live
 
