@@ -275,6 +275,18 @@ VIDEO_GEN_LOCAL_ENABLED=true
 VIDEO_GEN_LOCAL_MODEL=wan2.1-1.3b  # or wan2.1-14b, hunyuan-1.5, ltx2-local, cogvideo-5b
 ```
 
+For MiniMax-H3 on Apple Silicon through
+[`minimax-h3-stream-mac`](https://github.com/AIXF666/minimax-h3-stream-mac),
+configure its local runner instead — no API key is needed:
+
+```bash
+MINIMAX_H3_STREAM_PATH=/path/to/minimax-h3-stream-mac/.venv/bin/h3stream
+MINIMAX_H3_MODEL_DIR=/path/to/minimax-h3-stream-mac/models
+```
+
+The `minimax_h3_stream_local` tool is optimized for selected short shots. Start
+with 512x288, 5 seconds, 4 steps, and a 24 GiB memory limit on a 32 GiB Mac.
+
 </details>
 
 ---
